@@ -7,9 +7,19 @@
 //
 
 #include <stdio.h>
-
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
-    return 0;
+＃include<string.h>
+char GPSDATA[500];
+FILE *fp1;
+void main()
+{
+    void rx_gga(int n);
+    void rx_rmc(int n);
+    FILE *fp;
+    int i=0,len;
+    if(fp=fopen("c:\\a\\GPSDATAS.TXT","r"))==NULL)
+    {
+        printf("can not open the file\n");
+        exit(0);
+    }
+    for(;(GPSDATA[i++]=fgetc(fp)))
 }
